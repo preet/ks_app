@@ -1,0 +1,16 @@
+This directory structure corresponds to what is created by Android Studio with all the default/build files removed. Add the Java source files and XML files (AndroidManifest, etc) as appropriate for your project
+
+Library files for ks, sdl and the c++ stl should go in jniLibs:
+
+app/src/main/jniLibs/arch/libgnustl_shared.so
+app/src/main/jniLibs/arch/libks_test.so // replace with appropriate name
+app/src/main/jniLibs/arch/libSDL2.so
+
+'arch' should be the target architecture (ie armeabi-v7a)
+
+Build/copy the libs into the appropriate locations before building this project with Android Studio.
+
+The names of the library files should match the libraries loaded in the main activity:
+
+app/src/main/java/dev/ks/platform/sdl/KsActivity.java
+
